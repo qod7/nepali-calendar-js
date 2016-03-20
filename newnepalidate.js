@@ -1,22 +1,14 @@
 var setCalendar = function (currentDate) {
-	var tempGregorianDate = currentDate;
+	var tempFormattedGregorianDate = currentDate.format("YYYY-MM-DD");
+	var tempGregorianDate;
 	var tempNepaliDate;
-	console.log(currentDate);
-	console.log(currentDate.toLocaleDateString());
+	
+	console.log(tempFormattedGregorianDate);
 
-		tempNepaliDate = AD2BS(currentDate.toLocaleDateString());
-		selectedNepaliDate = tempNepaliDate;
-		console.log(selectedNepaliDate);
-		
-		var a = tempNepaliDate.split('-');
-		tempNepaliDate = a[0]+"-"+a[1]+"-"+"1";
-		console.log(tempNepaliDate);
+	tempNepaliDate = AD2BS(tempFormattedGregorianDate);
+	selectedNepaliDate = tempNepaliDate;
+	console.log(selectedNepaliDate);
+	
+	console.log(tempGregorianDate);
 
-		// tempGregorianDate = BS2AD(tempNepaliDate);
-		console.log(tempGregorianDate);
-
-		var currentMonth = a[1],
-			currentYear = a[0];
-
-		//console.log(tempGregorianDate.getDay());
 }

@@ -5,6 +5,7 @@
     <title>Calendar Widget</title> 
     <link rel="stylesheet" href="calendar.css" /> 
     <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
     <script type="text/javascript" src="nepalidate.js"></script>
     <script type="text/javascript" src="newnepalidate.js"></script>
 </head> 
@@ -28,8 +29,9 @@
  		<td>sat</td>
  	</table>
  	<script>
- 	date = new Date(2016,03,20);
- 	setCalendar(date);
+ 	var now = moment();
+ 	console.log("index moment Value: "+now.format("YYYY-MM-DD"));
+ 	setCalendar(now);
  	</script>
  	<div class="cal-frame">
  		<table class="curr"> 

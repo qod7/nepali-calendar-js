@@ -29,7 +29,7 @@ function getDateTable(a) {
 }
 
 function getMonthParameters(a) {
-    var b = a.split("/"),
+    var b = a.split("-"),
         c = b[0],
         d = b[1];
     $("#currentMonth").html(getNepaliMonth(d - 1) + "&nbsp;" + englishNo2Nep(c)), nYear = pYear = c, nMonth = parseInt(d, 10) + 1, nMonth > 12 && (nYear++, nMonth = "01"), pMonth = parseInt(d, 10) - 1, pMonth < 1 && (pYear--, pMonth = "12"), $("#prev").attr("onclick", "showCalendar('" + pYear + "-" + pMonth + "-01')"), $("#next").attr("onclick", "showCalendar('" + nYear + "-" + nMonth + "-01')");
@@ -38,7 +38,7 @@ function getMonthParameters(a) {
         g = new NepaliDateConverter,
         h = d + "/1/" + c,
         i = g.bs2ad(h),
-        j = i.split("/"),
+        j = i.split("-"),
         k = j[0],
         l = j[1],
         m = j[2],
@@ -48,7 +48,7 @@ function getMonthParameters(a) {
 }
 
 function getDateRows(a, b, c, d, e) {
-    for (var f = getNepaliDate(), g = f.split("/"), i = (g[0], get2DigitNo(g[1])), j = get2DigitNo(g[2]), k = "", l = 0; a + b > l; l++) {
+    for (var f = getNepaliDate(), g = f.split("-"), i = (g[0], get2DigitNo(g[1])), j = get2DigitNo(g[2]), k = "", l = 0; a + b > l; l++) {
         l % 7 === 0 && (k += "<tr>");
         var m = l - a + 1,
             n = c.toString() + "-" + get2DigitNo(d) + "-" + get2DigitNo(m),
@@ -95,7 +95,7 @@ function getCurrentDayName() {
 }
 
 function getDayFromDate(a) {
-    var b = a.split("/"),
+    var b = a.split("-"),
         c = b[2],
         d = b[1],
         e = b[0],
@@ -149,7 +149,7 @@ function getDateInNo(a) {
 }
 
 function getNepaliFormat(a) {
-    var b = a.split("/"),
+    var b = a.split("-"),
         c = b[2],
         d = b[1],
         e = b[0];
@@ -158,7 +158,7 @@ function getNepaliFormat(a) {
 
 function getAdDateInWords(a) {
     var b = getMonths(),
-        c = a.split("/"),
+        c = a.split("-"),
         d = c[2],
         e = c[1],
         f = c[0];
@@ -167,7 +167,7 @@ function getAdDateInWords(a) {
 
 function getNepaliDateInWords(a) {
     var b = getNepaliMonths(),
-        c = a.split("/"),
+        c = a.split("-"),
         d = c[2],
         e = c[1],
         f = c[0];
