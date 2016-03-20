@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8" /> 
+    <title>Calendar Widget</title> 
+    <link rel="stylesheet" href="calendar.css" /> 
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="nepalidate.js"></script>
+    <script type="text/javascript" src="newnepalidate.js"></script>
+</head> 
+<body> 
+ <div id="err"></div>
+ <div id="cal">
+ 	<div class="header">
+ 		<span id="prev" class="left button">&lang;</span>
+ 		<span class="left hook"></span>
+ 		<span id="label" class="month-year">Baishak 2070</span>
+ 		<span class="right hook"></span>
+ 		<span id="next" class="right button">&rang;</span>
+ 	</div>
+ 	<table id="days">
+ 		<td>sun</td> 
+ 		<td>mon</td> 
+ 		<td>tue</td> 
+ 		<td>wed</td> 
+ 		<td>thu</td> 
+ 		<td>fri</td> 
+ 		<td>sat</td>
+ 	</table>
+ 	<script>
+ 	date = new Date(2016,03,20);
+ 	setCalendar(date);
+ 	</script>
+ 	<div class="cal-frame">
+ 		<table class="curr"> 
+ 		    <tbody> 
+ 		        <tr><td class="nil"></td><td class="nil"></td><td>१</td><td>२</td><td>३</td><td>४</td><td>५</td></tr> 
+ 		        <tr><td>६</td><td>७</td><td>८</td><td>९</td><td>१०</td><td class="today">११</td><td>१२</td></tr> 
+ 		        <tr><td>१३</td><td>१४</td><td>१५</td><td>१६</td><td>१७</td><td>१८</td><td>१९</td></tr> 
+ 		        <tr><td>२०</td><td>२१</td><td>२२</td><td>२३</td><td>२४</td><td>२५</td><td>२६</td></tr> 
+ 		        <tr><td>२७</td><td>२८</td><td>२९</td><td>३०</td><td>३१</td><td>३२</td><td class="nil"></td></tr> 
+ 		    </tbody> 
+ 		</table>
+ 	</div>
+ </div>
+</body> 
+</html>
