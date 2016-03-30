@@ -94,7 +94,7 @@ var setCalendar = function(date) {
 	  			bool = true;
 
 	    	li = $("<li>").appendTo(ul).addClass("day");
-	    	
+
 	  	if(!bool)
 	    	li = li.addClass("other-month");
 
