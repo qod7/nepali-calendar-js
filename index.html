@@ -1,48 +1,79 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-    <meta charset="utf-8" /> 
-    <title>Calendar Widget</title> 
-    <link rel="stylesheet" href="calendar.css" /> 
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="moment.js"></script>
-    <script type="text/javascript" src="nepalidate.js"></script>
-    <script type="text/javascript" src="newnepalidate.js"></script>
-</head> 
-<body> 
- <div id="err"></div>
- <div id="cal">
- 	<div class="header">
- 		<span id="prev" class="left button">&lang;</span>
- 		<span class="left hook"></span>
- 		<span id="label" class="month-year">Baishak 2070</span>
- 		<span class="right hook"></span>
- 		<span id="next" class="right button">&rang;</span>
- 	</div>
- 	<table id="days">
- 		<td>sun</td> 
- 		<td>mon</td> 
- 		<td>tue</td> 
- 		<td>wed</td> 
- 		<td>thu</td> 
- 		<td>fri</td> 
- 		<td>sat</td>
- 	</table>
- 	<script>
- 	var now = moment("2016-04-13");
- 	setCalendar(now);
- 	</script>
- 	<div class="cal-frame">
- 		<table class="curr"> 
- 		    <tbody> 
- 		        <tr><td class="nil"></td><td class="nil"></td><td>१</td><td>२</td><td>३</td><td>४</td><td>५</td></tr> 
- 		        <tr><td>६</td><td>७</td><td>८</td><td>९</td><td>१०</td><td class="today">११</td><td>१२</td></tr> 
- 		        <tr><td>१३</td><td>१४</td><td>१५</td><td>१६</td><td>१७</td><td>१८</td><td>१९</td></tr> 
- 		        <tr><td>२०</td><td>२१</td><td>२२</td><td>२३</td><td>२४</td><td>२५</td><td>२६</td></tr> 
- 		        <tr><td>२७</td><td>२८</td><td>२९</td><td>३०</td><td>३१</td><td>३२</td><td class="nil"></td></tr> 
- 		    </tbody> 
- 		</table>
- 	</div>
- </div>
-</body> 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nepali Calendar</title>
+	<link rel="stylesheet" type="text/css" href="new-calendar.css">
+</head>
+<body>
+<div id="calendar-wrap">
+    		<header>
+    			<h1 class="arrow-prev"><</h1>
+    			<center>August 2014</center>
+    			<h1 class="arrow-next">></h1>
+    		</header>
+    		<div id="calendar">
+    			<ul class="weekdays">
+    				<li>Sunday</li>
+    				<li>Monday</li>
+    				<li>Tuesday</li>
+    				<li>Wednesday</li>
+    				<li>Thursday</li>
+    				<li>Friday</li>
+    				<li>Saturday</li>
+    			</ul>
+
+    			<!-- Days from previous month -->
+
+    			
+
+    		</div><!-- /. calendar -->
+    	</div><!-- /. wrap -->
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="moment.js"></script>
+<script type="text/javascript" src="nepalidate.js"></script>
+<script type="text/javascript" src="newnepalidate.js"></script>
 </html>
+<script>
+	var standardDate = new moment(); 
+	$(document).ready(function() {
+		var count = 0;
+	 	var now = new moment();
+	 	var dateList = getCalendarDate(standardDate);
+	 	setCalendar(dateList);
+
+	});
+	$(".arrow-next").click(function() {
+
+		tempEngDate = moment(standardDate).format("YYYY-MM-DD");
+		console.log("cuttent english date: "+tempEngDate);
+
+		tempNepDate = AD2BS(tempEngDate);
+		console.log("converted nepal date: "+tempNepDate);
+		tempNepDate = moment(tempNepDate).add(1,"month").format("YYYY-MM-DD");
+		console.log("added Nepali Date: " + tempNepDate);
+		standardDate = BS2AD(tempNepDate);
+		//console.log(standardDate);
+		// console.log(standardDate);
+	 	var dateList = getCalendarDate(standardDate);
+		setCalendar(dateList);
+	});
+
+	$(".arrow-prev").click(function() {
+
+		tempEngDate = moment(standardDate).format("YYYY-MM-DD");
+		console.log("cuttent english date: "+tempEngDate);
+
+		tempNepDate = AD2BS(tempEngDate);
+		console.log("converted nepal date: "+tempNepDate);
+		tempNepDate = moment(tempNepDate).subtract(1,"month").format("YYYY-MM-DD");
+		console.log("added Nepali Date: " + tempNepDate);
+		standardDate = BS2AD(tempNepDate);
+		//console.log(standardDate);
+		// console.log(standardDate);
+	 	var dateList = getCalendarDate(standardDate);
+		setCalendar(dateList);
+	});
+
+	
+</script>
