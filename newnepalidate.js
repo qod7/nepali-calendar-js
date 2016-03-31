@@ -67,9 +67,9 @@ var setCalendar = function(date) {
 
 	var dateList = date;
 	var count = 0;
+	var setMonth;
  	var enDateArray = new Array();
  	var npDateArray = new Array();
-	var npMonthArray = ["Baisakh","Jestha","Ashad","Shrawan","Bhadra","Ashwin","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"];
 
  	for (var i = 0; i < dateList.length; i++) {
 
@@ -80,7 +80,7 @@ var setCalendar = function(date) {
 		enDateArray.push(moment(dateList[i]).date());
 		// console.log(npDateArray);
 	};
-
+	setMonth = moment(dateList[i]).month();
 	$("#calendar ul li").remove();
 	var bool = false;
 	for(var i = 0; i <= 4 ; i++) {
@@ -108,4 +108,18 @@ var setCalendar = function(date) {
 };
 
 
+}
+
+var setDateTitle = function(date) {
+
+	var adDate = date;
+	var npMonthArray = ["Baisakh","Jestha","Ashad","Shrawan","Bhadra","Ashwin","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"];
+	
+	//change the current date to BS and then retrieve the month from that date.
+	npDate = AD2BS(date);
+	month = moment(npDate).month();
+	year = moment(npDate).year();
+	console.log(month);
+	console.log(npMonthArray[month]);
+	$(".month-year-name").html(npMonthArray[month]+" "+year);
 }
