@@ -121,7 +121,7 @@ var setCalendar = function(date) {
 		// console.log(npDateArray);
 	};
 	setMonth = moment(dateList[i]).month();
-	$("#calendar ul.days li.date").remove();
+	$("#calendar ul.days li").remove();
 	var bool = false;
 	var rows;
 	if(dateList.length > 35)
@@ -159,12 +159,22 @@ var setDateTitle = function(date) {
 
 	var adDate = date;
     var npMonthArray = new Array("\u092c\u0948\u0936\u093e\u0916", "\u091c\u0947\u0920", "\u0905\u0937\u093e\u0922", "\u0936\u094d\u0930\u093e\u0935\u0923", "\u092d\u093e\u0926\u094d\u0930", "\u0906\u0936\u094d\u0935\u093f\u0928", "\u0915\u093e\u0930\u094d\u0924\u093f\u0915", "\u092e\u0919\u094d\u0938\u093f\u0930", "\u092a\u094c\u0937", "\u092e\u093e\u0918", "\u092b\u093e\u0932\u094d\u0917\u0941\u0928", "\u091a\u0948\u0924\u094d\u0930");
+    var enMonthArray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 	
 	//change the current date to BS and then retrieve the month from that date.
 	npDate = AD2BS(date);
-	month = getCurrentMonth(npDate);
-	year = getCurrentYear(npDate);
-	$(".month-year-name").html(npMonthArray[month]+" "+year);
+	npMonth = getCurrentMonth(npDate);
+	npYear = getCurrentYear(npDate);
+
+	enMonth = moment(adDate).month();
+	console.log("enMonthArray[enMonth] and enMonthArray[enMonth+1]"+enMonthArray[enMonth]+" "+enMonthArray[enMonth+1]);
+	enYear = moment(adDate).year();
+
+	// if(enMonth >10)
+	// 	enMonth = 0;
+	var	  plusOne = enMonth + 1
+	if (plusOne > 11) plusOne = 0
+	$(".month-year-name").html(npMonthArray[npMonth]+" "+npYear+" / "+enMonthArray[enMonth]+"-"+enMonthArray[plusOne]+" "+enYear);
 }
 
 $(".arrow-next").click(function() {
