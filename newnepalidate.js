@@ -121,7 +121,7 @@ var setCalendar = function(date) {
 		// console.log(npDateArray);
 	};
 	setMonth = moment(dateList[i]).month();
-	$("#calendar ul li").remove();
+	$("#calendar ul.days li.date").remove();
 	var bool = false;
 	var rows;
 	if(dateList.length > 35)
@@ -158,7 +158,7 @@ var setCalendar = function(date) {
 var setDateTitle = function(date) {
 
 	var adDate = date;
-	var npMonthArray = ["Baisakh","Jestha","Ashad","Shrawan","Bhadra","Ashwin","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"];
+    var npMonthArray = new Array("\u092c\u0948\u0936\u093e\u0916", "\u091c\u0947\u0920", "\u0905\u0937\u093e\u0922", "\u0936\u094d\u0930\u093e\u0935\u0923", "\u092d\u093e\u0926\u094d\u0930", "\u0906\u0936\u094d\u0935\u093f\u0928", "\u0915\u093e\u0930\u094d\u0924\u093f\u0915", "\u092e\u0919\u094d\u0938\u093f\u0930", "\u092a\u094c\u0937", "\u092e\u093e\u0918", "\u092b\u093e\u0932\u094d\u0917\u0941\u0928", "\u091a\u0948\u0924\u094d\u0930");
 	
 	//change the current date to BS and then retrieve the month from that date.
 	npDate = AD2BS(date);
@@ -175,6 +175,7 @@ $(".arrow-next").click(function() {
 
 	tempNepDate = addToMonth(tempNepDate,1);
 	standardDate = BS2AD(tempNepDate);
+
  	var dateList = getCalendarDate(standardDate);
  	console.log(dateList.length);
  	setDateTitle(standardDate);
@@ -184,15 +185,10 @@ $(".arrow-next").click(function() {
 $(".arrow-prev").click(function() {
 
 	tempEngDate = moment(standardDate).format("YYYY-MM-DD");
-	console.log("cuttent english date: "+tempEngDate);
 
 	tempNepDate = AD2BS(tempEngDate);
-	console.log("converted nepal date: "+tempNepDate);
 	tempNepDate = addToMonth(tempNepDate,-1);
-	console.log("subtracted Nepali Date: " + tempNepDate);
 	standardDate = BS2AD(tempNepDate);
-	//console.log(standardDate);
-	// console.log(standardDate);
  	var dateList = getCalendarDate(standardDate);
 
  	setDateTitle(standardDate);

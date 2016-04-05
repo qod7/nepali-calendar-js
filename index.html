@@ -3,16 +3,20 @@
 <head>
 	<title>Nepali Calendar</title>
 	<link rel="stylesheet" type="text/css" href="new-calendar.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+
 </head>
 <body>
 <div id="calendar-wrap">
 	<header>
-		<h1 class="arrow-prev"><</h1>
-		<center class="month-year-name">August 2014</center>
-		<h1 class="arrow-next">></h1>
+		<span class="arrow-prev fa-angle-left"></span>
+		<span class="month-year-name">August 2014</span>
+		<span class="arrow-next">></span>
 	</header>
 	<div id="calendar">
 		<ul class="weekdays">
+    <!-- var a = new Array(\u0906", "\u0938\u094b", "\u092e\u0902", "\u092c\u0941", "\u092c\u093f", "\u0936\u0941", "\u0936"); -->
+
 			<li>Sunday</li>
 			<li>Monday</li>
 			<li>Tuesday</li>
@@ -21,11 +25,6 @@
 			<li>Friday</li>
 			<li>Saturday</li>
 		</ul>
-
-		<!-- Days from previous month -->
-
-		
-
 	</div><!-- /. calendar -->
 </div><!-- /. wrap -->
 </body>
@@ -33,6 +32,7 @@
 <script type="text/javascript" src="moment.js"></script>
 <script type="text/javascript" src="nepalidate.js"></script>
 <script type="text/javascript" src="newnepalidate.js"></script>
+
 </html>
 <script>
 

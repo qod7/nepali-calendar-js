@@ -1,1 +1,774 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"l",
+				"length"
+			],
+			[
+				"TemNepaDa",
+				"tempNepaliDate"
+			],
+			[
+				"fomrda",
+				"formattedDate"
+			],
+			[
+				"form",
+				"formattedDate"
+			],
+			[
+				"date",
+				"dateList"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"datel",
+				"dateList"
+			],
+			[
+				"tempgr",
+				"tempFormattedGregorianDate"
+			],
+			[
+				"sele",
+				"selectedNepaliDate"
+			],
+			[
+				"convertT",
+				"convertToRequiredFormat"
+			],
+			[
+				"tempG",
+				"tempGregorianDate"
+			],
+			[
+				"se",
+				"selectedNepaliDate"
+			],
+			[
+				"nepali",
+				"nepaliDatePicker"
+			],
+			[
+				"ge",
+				"getMonths"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"widt",
+				"width	Attr"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"ori",
+				"originText"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"json",
+				"jsonData"
+			],
+			[
+				"jso",
+				"jsonData"
+			],
+			[
+				"sub",
+				"submit"
+			],
+			[
+				"datet",
+				"datetime"
+			],
+			[
+				"p",
+				"pub_date"
+			],
+			[
+				"qu",
+				"question_text"
+			],
+			[
+				"url",
+				"urls"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"di",
+				"divid"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1223,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "newnepalidate.js",
+			"settings":
+			{
+				"buffer_size": 5495,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "nepalidate.js",
+			"settings":
+			{
+				"buffer_size": 18676,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 94.0,
+		"last_filter": "qc",
+		"selected_items":
+		[
+			[
+				"qc",
+				"Git: Quick Commit"
+			],
+			[
+				"git s",
+				"Git: Status"
+			],
+			[
+				"q",
+				"Git: Quick Commit"
+			],
+			[
+				"comm",
+				"Git: Quick Commit"
+			],
+			[
+				"gc",
+				"Git: Commit"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git ocmmit",
+				"Git: Commit"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"gqc",
+				"Git: Quick Commit"
+			],
+			[
+				"insta	",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"inse",
+				"Insert Filepath"
+			]
+		],
+		"width": 634.0
+	},
+	"console":
+	{
+		"height": 211.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"https://github.com/BoundInCode/AutoFileName.git",
+			"package control"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/uvishere/work/nepali-date-test/datamaps.js",
+		"/home/uvishere/work/nepali-date-test/test.html",
+		"/home/uvishere/work/nepali-date-test/newnepalidate.js",
+		"/home/uvishere/work/nepali-date-test/nepalidate.js",
+		"/home/uvishere/work/nepali-date-test/new-calendar.css",
+		"/media/uvishere/everything/work/passiontech/AdminTheme/v4.0.1/theme/templates/admin/page_calendar.html",
+		"/home/uvishere/www/eattendance-web/website/static/assets/admin/pages/scripts/calendar.js",
+		"/home/uvishere/www/eattendance-web/website/static/assets/global/plugins/fullcalendar/fullcalendar.css",
+		"/home/uvishere/.cache/.fr-2QQOpW/Agila.sublime-theme",
+		"/home/uvishere/www/eattendance-web/website/static/assets/global/plugins/fullcalendar/fullcalendar.js",
+		"/home/uvishere/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/uvishere/www/eattendance-web/website/static/assets/global/plugins/datatables/examples/plug-ins/index.html",
+		"/home/uvishere/work/nepali-date-test/index.html",
+		"/media/uvishere/everything/work/passiontech/AdminTheme/v4.0.1/theme/templates/admin/index.html",
+		"/home/uvishere/Downloads/responsive-html5-css3-calendar-clock-widget/index.html",
+		"/home/uvishere/work/nepali-date-test/javacalendarBySubedi.java",
+		"/home/uvishere/work/nepali-date-test/calendar.js",
+		"/home/uvishere/work/nepali-date-test/calendar.css",
+		"/home/uvishere/work/nepali-date-test/moment.js",
+		"/home/uvishere/www/eattendance-web/website/templates/organization/list_staff.html",
+		"/home/uvishere/www/eattendance-web/website/templates/organization/messages.html",
+		"/home/uvishere/www/eattendance-web/website/passion/urls.py",
+		"/home/uvishere/www/eattendance-web/website/organization/models.py",
+		"/home/uvishere/www/maxidapp/website/maxidapp/settings/base.py",
+		"/home/uvishere/www/eattendance-web/website/passion/settings/base.py",
+		"/home/uvishere/www/eattendance-web/website/static/js/nepali-date.js",
+		"/home/uvishere/www/eattendance-web/website/organization/views.py",
+		"/home/uvishere/www/eattendance-web/website/organization/admin.py",
+		"/home/uvishere/www/maxidapp/website/maxidapp/urls.py",
+		"/home/uvishere/www/eattendance-web/website/reseller/views.py",
+		"/home/uvishere/www/eattendance-web/website/templates/organization/base.html",
+		"/home/uvishere/www/eattendance-web/website/organization/urls.py",
+		"/home/uvishere/www/eattendance-web/website/templates/organization/settings.html",
+		"/home/uvishere/www/eattendance-web/website/superadmin/urls.py",
+		"/home/uvishere/www/eattendance-web/website/templates/organization/dashboard.html",
+		"/home/uvishere/www/eattendance-web/website/templates/organization/analytics.html",
+		"/home/uvishere/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/uvishere/www/eattendance-web/website/passion/templates/reseller/add_organization.html",
+		"/home/uvishere/www/eattendance-web/website/passion/templates/reseller/base.html",
+		"/home/uvishere/www/eattendance-web/website/passion/templates/reseller/list_organizations.html",
+		"/home/uvishere/www/tutorial/tutorial/urls.py",
+		"/home/uvishere/www/dcnepal_app/app/src/main/res/values/strings.xml",
+		"/home/uvishere/www/maxidapp/website/templates/pages/home.html",
+		"/home/uvishere/www/tutorial/polls/admin.py",
+		"/home/uvishere/www/tutorial/polls/urls.py",
+		"/home/uvishere/www/tutorial/polls/models.py",
+		"/home/uvishere/www/tutorial/tutorial/settings.py",
+		"/home/uvishere/www/tutorial/polls/views.py",
+		"/home/uvishere/work/test.html",
+		"/media/uvishere/USB DISK/android_app_webcontent/js/suggestions_jsonp_loaded_from_file.js",
+		"/media/uvishere/USB DISK/android_app_webcontent/index.html",
+		"/etc/nginx/sites-enabled/ngn-new",
+		"/home/uvishere/work/nspoi/styles/main.css",
+		"/home/uvishere/work/nspoi/members.html",
+		"/home/uvishere/work/nspoi/members-designfile.html",
+		"/home/uvishere/work/nspoi/about.html",
+		"/home/uvishere/work/nspoi/events.html",
+		"/home/uvishere/work/home-backup.php",
+		"/home/uvishere/work/style.css",
+		"/home/uvishere/work/forsee-header.php",
+		"/home/uvishere/www/eattendance-web/website/passion/emailcopies/20160210-130058-139912479658392.log",
+		"/home/uvishere/work/yarsha.php",
+		"/home/uvishere/temp/lifecoachhomepage.html",
+		"/home/uvishere/temp/lifecoach.php",
+		"/home/uvishere/work/nspoi/gallery.html",
+		"/home/uvishere/work/nspoi/scripts/main.js",
+		"/home/uvishere/.config/sublime-text-3/Packages/Insert-Filepath/InsertFilepath.sublime-settings",
+		"/home/uvishere/.config/sublime-text-3/Packages/User/InsertFilepath.sublime-settings",
+		"/home/uvishere/work/nspoi/index.html",
+		"/home/uvishere/.config/sublime-text-3/Packages/AutoFileName/autofilename.sublime-settings",
+		"/home/uvishere/work/nspoi/images/gallery/AGM/Annual General meeting.JPG",
+		"/var/www/nspoi/nabn.bitbucket.org/scripts/main.js",
+		"/var/www/nspoi/nabn.bitbucket.org/styles/main.css",
+		"/var/www/nspoi/nabn.bitbucket.org/index.html",
+		"/var/www/nspoi/nabn.bitbucket.org/about.html",
+		"/var/www/nspoi/nabn.bitbucket.org/contact.html",
+		"/var/www/nspoi/nabn.bitbucket.org/events.html",
+		"/var/www/nspoi/nabn.bitbucket.org/downloads.html",
+		"/var/www/nspoi/nabn.bitbucket.org/gallery.html",
+		"/var/www/nspoi/nabn.bitbucket.org/members.html",
+		"/home/uvishere/Documents/lcsHomePageBackup.html",
+		"/home/uvishere/temp/customfeed.php"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"length",
+			"console",
+			"var",
+			";",
+			"var",
+			";",
+			"var",
+			"console.log",
+			");\n",
+			"subtracted",
+			"formattedDate",
+			"getMonth",
+			"currentMonth",
+			"currentmonth",
+			"<center>",
+			"<center",
+			"added",
+			"console.log",
+			"header",
+			"dateArray",
+			"count",
+			"fd",
+			"i",
+			"DDconsole",
+			"console.log",
+			"id=\"calendar",
+			"fullCalendar",
+			"fullcalendar",
+			"for",
+			"bufferDate",
+			"tempNepaliDate",
+			"split",
+			"get",
+			"count_bs_days",
+			"ad2bs",
+			"AD2BS",
+			"NepaliDateConVerter",
+			"getYear",
+			"getNepali",
+			"getNepaliFormat",
+			"getMonth",
+			"getNepaliDate",
+			"getMonths",
+			"a.split",
+			"NepaliDateConverter",
+			"getNepaliDate",
+			"getNepali",
+			"getNepaliFormat",
+			"nepalidate",
+			"bs2ad",
+			"setCa",
+			"setCa	",
+			"getNepaliDay",
+			"function getDay",
+			"getDay",
+			"getDay()",
+			"getDay",
+			"ndpEnglishInput",
+			"ndbEnglishInput",
+			"nepaliDatePicker",
+			"organization",
+			"extrajs",
+			"sidebar",
+			"Organizations",
+			"a",
+			"<!-- <a",
+			"- <a",
+			"organization",
+			"<!-- <a href=\"{% url 'organization",
+			"!-- <a href=\"{% url 'organization",
+			"settings",
+			"organization",
+			"organization:",
+			"list_organizations",
+			"organization",
+			"    <a href=\"{% url 'reseller:home' %}\">\n        <i class=\"icon-home\"></i>\n        <span class=\"title\">\n            Dashboard\n        </span>\n    </a>\n</li>\n\n",
+			"2",
+			"<div class=\"col-lg-4 text-center\" style=\"margin-top:30px\">\n                <p>Nepal<br/>\n				Jwagal 10, Kupondole,<br/>\n				Lalitpur, Kathmandu</p>\n            </div>",
+			"P",
+			"p",
+			"findMatches",
+			"cb",
+			"<",
+			"\n    <tbody>\n      <tr class=\"row\">\n        <td class=\"twelve columns\">\n          <tr>\n           <td><img src=\"images/members/new-members/shaili-pradhan.png\" />Dr. Shaili Pradhan</td> \n           <td><img src=\"images/members/new-members/rita-singh.png\" />Dr. Rita Singh</td> \n           <td><img src=\"images/members/new-members/surendraman-shrestha.png\" />Dr. Surendra Man Shrestha</td> \n           <td><img src=\"images/members/new-members/durga-pun.png\" />Dr. Durga Pun</td> \n           <td><img src=\"images/members/new-members/shivalal-sharma.png\" />Dr. Shivalal Sharma</td> \n          </tr>\n        </td>\n      <tr class=\"row\">\n       <td class=\"twelve columns\">\n          <tr>\n           <td><img src=\"images/members/new-members/sameer-aryal.png\" />Dr. Sameer Aryal</td> \n           <td><img src=\"images/members/new-members/manoj-humagain.png\" />Dr. Manoj Humagain</td> \n           <td><img src=\"images/members/new-members/bhageshwor-dhami.png\" />Dr. Bhageshwar Dhami</td> \n           <td><img src=\"images/members/new-members/priti-shrestha.png\" />Dr. Preeti Shrestha</td> \n           <td><img src=\"images/members/new-members/junima-rajkarnikar.png\" />Dr. Junima Rajkarnikar</td> \n          </tr>\n          \n        </td>\n      </tr>\n       <td class=\"four columns\">\n          <tr>\n           <td><img src=\"images/members/new-members/ameena-pradhan.png\" /> Ameena Pradhan</td> \n           <td><img src=\"images/members/new-members/dhirendra-giri.png\" />Dr. Dhirendra Kumar Giri</td> \n           <td><img src=\"images/members/new-members/sunita-tara-sharma.png\" />Dr. Sunita Tara Sharma</td> \n           <td><img src=\"images/members/new-members/rangita-shrestha.png\" />Dr. Rangita Shrestha</td> \n           <td><img src=\"images/members/new-members/navaraj-lamdari.png\" />Dr. Navaraj Lamdari</td> \n          </tr>\n        </td>\n      <td class=\"four columns\">\n          <tr>\n           <td><img src=\"images/members/new-members/khusboo-goel.png\" />Dr. Khusboo Goel</td> \n           <td><img src=\"images/members/new-members/sweta-rajyalaxmi.png\" />Dr Sweta Rajya Laxmi Rana</td> \n           <td><img src=\"images/members/new-members/mahima-subba.png\" />Dr. Mahima Subba</td> \n           <td><img src=\"images/members/new-members/sanjeev-shrestha.png\" />Dr. Sanjeev Shrestha</td> \n           <td><img src=\"images/members/new-members/ameena-pradhan.png\" />Dr. Deepesh Bikram Thapa</td> \n          </tr>\n        </td>\n      <td class=\"four columns\">\n          <tr>\n           <td><img src=\"images/members/new-members/mohana-giri.png\" />Dr. Mohana Giri</td> \n          <td><img src=\"images/members/new-members/sonika-shakya.png\" />Dr. Sonika Shakya</td> \n          <td><img src=\"images/members/new-members/shreeya-aryal.png\" />Dr. Shreeya Aryal</td> \n          <td><img src=\"images/members/new-members/sushil-kc.png\" />Dr. Sushil KC</td> \n          <td><img src=\"images/members/new-members/placeholder.jpg\" />Dr. Mohana Giri</td>\n          </tr>\n        </td>\n      <td class=\"four columns\">\n          <tr>\n           <td><img src=\"images/members/new-members/placeholder.jpg\" />Dr. Bhagwat Bhattarai</td> \n           <td><img src=\"images/members/new-members/placeholder.jpg\" />Dr. Khushbu Adhikari</td> \n          </tr>\n        </td>\n      \n      </tr>\n    </tbody>\n",
+			"/ameena-pradhan.png",
+			"\n        ",
+			"           <td></td>\n",
+			" <td></td>",
+			" \n",
+			"></",
+			"<tr>",
+			"</td>",
+			"Ameena Pradhan",
+			"           <",
+			"style=\"width:200px;\"",
+			"members/",
+			"member",
+			"International Coach Federation",
+			"Coach",
+			".sti",
+			"stic",
+			"sticky",
+			"youtube",
+			"our coach",
+			"coaches",
+			"KMC",
+			"dhulikhel",
+			"secondCDE",
+			"two",
+			"three",
+			"bhages",
+			"bhag",
+			"png",
+			"jpg",
+			"image",
+			"data-u=\"image\"",
+			"te",
+			"u=",
+			"  \n",
+			"http://placehold.it/350x150",
+			"350x150",
+			"img ",
+			"two",
+			"http://placecorgi.com/260/180",
+			"https://placekitten.com/200/300",
+			"div",
+			"\"><img src=\"https://placekitten.com/200/300\"/></",
+			"<img src=\"https://placekitten.com/200/300\"/>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1223,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								890,
+								890
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "newnepalidate.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5495,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4605,
+								4605
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "nepalidate.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4061,
+								4061
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2856.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 146.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fullcalej",
+				"static/assets/global/plugins/fullcalendar/fullcalendar.js"
+			],
+			[
+				"fullcale",
+				"static/assets/global/plugins/fullcalendar/fullcalendar.css"
+			],
+			[
+				"scrcalend",
+				"static/assets/admin/pages/scripts/calendar.js"
+			],
+			[
+				"adminindex",
+				"static/assets/global/plugins/datatables/examples/plug-ins/index.html"
+			],
+			[
+				"passurl",
+				"passion/urls.py"
+			],
+			[
+				"orgad",
+				"organization/admin.py"
+			],
+			[
+				"orgmod",
+				"organization/models.py"
+			],
+			[
+				"resevi",
+				"reseller/views.py"
+			],
+			[
+				"orgvie",
+				"organization/views.py"
+			],
+			[
+				"resvie",
+				"reseller/views.py"
+			],
+			[
+				"orgve",
+				"organization/views.py"
+			],
+			[
+				"orglis",
+				"templates/organization/list_staff.html"
+			],
+			[
+				"orgvi",
+				"organization/views.py"
+			],
+			[
+				"orgmo",
+				"organization/models.py"
+			],
+			[
+				"orgv",
+				"organization/views.py"
+			],
+			[
+				"orgulr",
+				"organization/urls.py"
+			],
+			[
+				"url",
+				"passion/urls.py"
+			],
+			[
+				"passion/o",
+				"passion/templates/reseller/add_organization.html"
+			],
+			[
+				"mem",
+				"members.html"
+			],
+			[
+				"style",
+				"styles/main.css"
+			],
+			[
+				"ab",
+				"about.html"
+			],
+			[
+				"even",
+				"events.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 630.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 479.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 316.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

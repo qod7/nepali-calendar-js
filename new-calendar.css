@@ -1,10 +1,13 @@
 body {
-	font-family: Tahoma;
+	font-family: sans-serif;
 }
 
 header {
 	text-align: center;
-	height: 100px;
+    height: 1.5em;
+    background: #ddd;
+    padding-top: 8px;
+    margin: 5px;
 }
 .arrow-prev {
 	float: left;
@@ -14,7 +17,12 @@ header {
 }
 
 #calendar {
-	width: 100%;	
+	width: 100%;
+	overflow: hidden;	
+}
+
+#calendar-wrap {
+	padding: 50px;
 }
 
 #calendar a {
@@ -35,24 +43,22 @@ header {
 	width:14.342%;
 	padding: 5px;
 	box-sizing:border-box;
-	border: 1px solid #ccc;
+	border: 1px solid #EFEFEF;
 	margin-right: -1px;
 	margin-bottom: -1px;
 }
 
 #calendar ul.weekdays {
 	height: 40px;
-	background: #8e352e;
+	background: #F1F1F1;
 }
 
 #calendar ul.weekdays li {
 	text-align: center;
-	text-transform: uppercase;
-	line-height: 20px;
-	border: none !important;
 	padding: 10px 6px;
-	color: #fff;
-	font-size: 13px;
+	color: #05525D;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 #calendar .days li {
@@ -62,18 +68,16 @@ header {
 }
 
 #calendar .days li:hover {
-	background: #d3d3d3;
+	background: #eeeeee;
 }
 
 #calendar .date {
-	text-align: center;
-	margin-bottom: 5px;
-	padding: 4px;
-	background: #333;
-	color: #fff;
-	width: 20px;
-	border-radius: 50%;
-	float: right;
+    padding: 4px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
 }
 
 #calendar .event {
@@ -98,21 +102,16 @@ header {
 }
 
 #calendar .other-month {
-	background: #ddd;
+	background: rgba(241, 241, 241, 0.62);
 	color: #666;
 }
 #calendar .endate { 
 	right: 0;
     bottom: 0;
     position: absolute;
-    text-align: center;
-    margin-bottom: 5px;
     padding: 4px;
-    background: #B51B1B;
-    color: #fff;
-    width: 20px;
-    border-radius: 50%;
-    float: right;
+    color: #666;
+    font-size: 0.8em;
 }
 /* ============================
 				Mobile Responsiveness
@@ -127,7 +126,7 @@ header {
 
 	#calendar li {
 		height: auto !important;
-		border: 1px solid #ededed;
+		border: 1px solid #EFEFEF;
 		width: 100%;
 		padding: 10px;
 		margin-bottom: -1px;
@@ -135,5 +134,8 @@ header {
 
 	#calendar .date {
 		float: none;
+		text-align: left;
+		font-size: 1em;
+		line-height: inherit;
 	}
 }
