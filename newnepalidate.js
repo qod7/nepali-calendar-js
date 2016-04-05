@@ -104,7 +104,7 @@ var getCalendarDate = function (currentDate) {
 	return dateList;
 }
 
-var setCalendar = function(date) {
+var setCalendar = function(date, todayDate) {
 
 	var dateList = date,
 		count = 0,
@@ -124,10 +124,12 @@ var setCalendar = function(date) {
 	$("#calendar ul.days li").remove();
 	var bool = false;
 	var rows;
+
 	if(dateList.length > 35)
 		rows = 5;
 	else 
 		rows = 4;
+
 	for(var i = 0; i <= rows ; i++) {
 	  var ul = $("<ul>").appendTo("#calendar").addClass("days");
 	  for(var j = 0; j <= 6; j++) {
@@ -138,15 +140,15 @@ var setCalendar = function(date) {
 	  		else
 	  			bool = true;
 
-	    	li = $("<li>").appendTo(ul).addClass("day");
+	    li = $("<li>").appendTo(ul).addClass("day");
 
 	  	if(!bool)
 	    	li = li.addClass("other-month");
 
-	      $("<div>").prepend(npDateArray[count]).appendTo(li).addClass("date");
-	      $("<div>").prepend(enDateArray[count]).appendTo(li).addClass("endate");
+	    $("<div>").prepend(npDateArray[count]).appendTo(li).addClass("date");
+	    $("<div>").prepend(enDateArray[count]).appendTo(li).addClass("endate");
 
-	      count = count + 1;
+	    count = count + 1;
 
 	  };
 
@@ -189,7 +191,7 @@ $(".arrow-next").click(function() {
  	var dateList = getCalendarDate(standardDate);
  	console.log(dateList.length);
  	setDateTitle(standardDate);
-	setCalendar(dateList);
+	setCalendar(dateList, standardDate);
 });
 
 $(".arrow-prev").click(function() {

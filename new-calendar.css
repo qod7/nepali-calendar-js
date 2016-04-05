@@ -5,9 +5,10 @@ body {
 header {
 	text-align: center;
     height: 1.5em;
-    background: #ddd;
     padding-top: 8px;
     margin: 5px;
+    color: #05525d;
+
 }
 .arrow-prev {
 	float: left;
