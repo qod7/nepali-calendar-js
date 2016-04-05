@@ -46,26 +46,18 @@ var getCurrentDay= function (date) {
 
 var getCalendarDate = function (currentDate) {
 //accepts english date only.
-	console.log("currentDate: "+currentDate);
-	var tempFormattedGregorianDate = currentDate;
-	console.log("tempGregorianDate: "+tempFormattedGregorianDate);
-	var tempGregorianDate;
-	var tempNepaliDate;
-	var dateList = new Array();
+	var tempFormattedGregorianDate = currentDate,
+		tempGregorianDate,
+		tempNepaliDate,
+		dateList = new Array();
 
 	tempNepaliDate = AD2BS(tempFormattedGregorianDate);
 	selectedNepaliDate = tempNepaliDate;
 	tempNepaliDate = setDateToOne(tempNepaliDate);
 	tempGregorianDate = BS2AD(tempNepaliDate);
 
-	var currentMonth = getCurrentMonth(tempNepaliDate);
-	console.log("currentMonth: "+currentMonth);
-
-	// var currentYear = moment(tempNepaliDate).get('year');
-	var currentYear = getCurrentYear(tempNepaliDate);
-
-	console.log(currentYear);
-	console.log(currentYear, currentMonth);
+	var currentMonth = getCurrentMonth(tempNepaliDate),
+		currentYear = getCurrentYear(tempNepaliDate);
 
 	weekday = moment(tempGregorianDate).weekday();
 	diff = moment(tempGregorianDate).subtract(weekday,'days');
@@ -114,16 +106,16 @@ var getCalendarDate = function (currentDate) {
 
 var setCalendar = function(date) {
 
-	var dateList = date;
-	var count = 0;
-	var setMonth;
- 	var npDateArray = new Array();
- 	var enDateArray = new Array();
+	var dateList = date,
+		count = 0,
+		setMonth,
+ 		npDateArray = new Array(),
+ 		enDateArray = new Array();
 
  	for (var i = 0; i < dateList.length; i++) {
 
  		var tempNpDate = AD2BS(dateList[i]);
- 		
+
  		npDateArray.push(getCurrentDay(tempNpDate));
 		enDateArray.push(moment(dateList[i]).date());
 		// console.log(npDateArray);
@@ -131,7 +123,12 @@ var setCalendar = function(date) {
 	setMonth = moment(dateList[i]).month();
 	$("#calendar ul li").remove();
 	var bool = false;
-	for(var i = 0; i <= 4 ; i++) {
+	var rows;
+	if(dateList.length > 35)
+		rows = 5;
+	else 
+		rows = 4;
+	for(var i = 0; i <= rows ; i++) {
 	  var ul = $("<ul>").appendTo("#calendar").addClass("days");
 	  for(var j = 0; j <= 6; j++) {
 
@@ -165,28 +162,21 @@ var setDateTitle = function(date) {
 	
 	//change the current date to BS and then retrieve the month from that date.
 	npDate = AD2BS(date);
-	month = moment(npDate).month();
-	year = moment(npDate).year();
-	console.log(month);
-	console.log(npMonthArray[month]);
+	month = getCurrentMonth(npDate);
+	year = getCurrentYear(npDate);
 	$(".month-year-name").html(npMonthArray[month]+" "+year);
 }
 
 $(".arrow-next").click(function() {
 
 	tempEngDate = moment(standardDate).format("YYYY-MM-DD");
-	console.log("cuttent english date: "+tempEngDate);
 
 	tempNepDate = AD2BS(tempEngDate);
-	console.log("converted nepal date: "+tempNepDate);
 
 	tempNepDate = addToMonth(tempNepDate,1);
-	console.log("added Nepali Date: " + tempNepDate);
 	standardDate = BS2AD(tempNepDate);
-	//console.log(standardDate);
-	// console.log(standardDate);
  	var dateList = getCalendarDate(standardDate);
-
+ 	console.log(dateList.length);
  	setDateTitle(standardDate);
 	setCalendar(dateList);
 });
