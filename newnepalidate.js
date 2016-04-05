@@ -33,8 +33,11 @@ var addToMonth = function (date, monthsToAdd) {
 
 var getCurrentMonth = function (date) {
 	var tempDate = date.split("-");
-	console.log("getCurrentMonth: "+ parseInt(tempDate[1])-1);
-	// return parseToInt(tempDate[1])-1;
+	 return parseInt(tempDate[1])-1;
+}
+var getCurrentYear= function (date) {
+	var tempDate = date.split("-");
+	 return parseInt(tempDate[0]);
 }
 
 var getCalendarDate = function (currentDate) {
@@ -49,18 +52,16 @@ var getCalendarDate = function (currentDate) {
 	tempNepaliDate = AD2BS(tempFormattedGregorianDate);
 	selectedNepaliDate = tempNepaliDate;
 	tempNepaliDate = setDateToOne(tempNepaliDate);
-
-	console.log("tempNepaliDate: "+tempNepaliDate);
-
-	console.log("tempNepaliDate: "+tempNepaliDate);
-
 	tempGregorianDate = BS2AD(tempNepaliDate);
 
-	var currentMonth = moment(tempNepaliDate).month();
-	getCurrentMonth(tempNepaliDate);
+	var currentMonth = getCurrentMonth(tempNepaliDate);
 	console.log("currentMonth: "+currentMonth);
-	var currentYear = moment(tempNepaliDate).get('year');
-	//console.log(currentYear, currentMonth);
+
+	// var currentYear = moment(tempNepaliDate).get('year');
+	var currentYear = getCurrentYear(tempNepaliDate);
+
+	console.log(currentYear);
+	console.log(currentYear, currentMonth);
 
 	weekday = moment(tempGregorianDate).weekday();
 	diff = moment(tempGregorianDate).subtract(weekday,'days');
@@ -86,9 +87,9 @@ var getCalendarDate = function (currentDate) {
 		tempGregorianDate = moment(moment(tempGregorianDate).add(1, 'days')).format("YYYY-MM-DD");
 		tempNepaliDate = AD2BS(tempGregorianDate);
 
-		cond1 = (currentYear === moment(tempNepaliDate).get('year') && currentMonth >= moment(tempNepaliDate).get('month'));
+		cond1 = (currentYear === getCurrentYear(tempNepaliDate) && currentMonth >= getCurrentMonth(tempNepaliDate));
 
-		cond2 =  (currentYear > moment(tempNepaliDate).get('year') && currentMonth === 0);
+		cond2 =  (currentYear > getCurrentYear(tempNepaliDate) && currentMonth === 0);
 	}
 	
 	weekday = moment(tempGregorianDate).weekday();
@@ -112,12 +113,12 @@ var setCalendar = function(date) {
 	var dateList = date;
 	var count = 0;
 	var setMonth;
- 	var enDateArray = new Array();
  	var npDateArray = new Array();
+ 	var enDateArray = new Array();
 
  	for (var i = 0; i < dateList.length; i++) {
 
- 		var tempNpDate = AD2BS(moment(dateList[i]).format("YYYY-MM-DD"));
+ 		var tempNpDate = AD2BS(dateList[i]);
  		// console.log("this month:"+isSameMonth);
  		npDateArray.push(moment(tempNpDate).date());
 		enDateArray.push(moment(dateList[i]).date());
