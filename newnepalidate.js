@@ -39,6 +39,10 @@ var getCurrentYear= function (date) {
 	var tempDate = date.split("-");
 	 return parseInt(tempDate[0]);
 }
+var getCurrentDay= function (date) {
+	var tempDate = date.split("-");
+	 return parseInt(tempDate[2]);
+}
 
 var getCalendarDate = function (currentDate) {
 //accepts english date only.
@@ -119,8 +123,8 @@ var setCalendar = function(date) {
  	for (var i = 0; i < dateList.length; i++) {
 
  		var tempNpDate = AD2BS(dateList[i]);
- 		// console.log("this month:"+isSameMonth);
- 		npDateArray.push(moment(tempNpDate).date());
+ 		
+ 		npDateArray.push(getCurrentDay(tempNpDate));
 		enDateArray.push(moment(dateList[i]).date());
 		// console.log(npDateArray);
 	};
