@@ -6,28 +6,28 @@
 </head>
 <body>
 <div id="calendar-wrap">
-    		<header>
-    			<h1 class="arrow-prev"><</h1>
-    			<center>August 2014</center>
-    			<h1 class="arrow-next">></h1>
-    		</header>
-    		<div id="calendar">
-    			<ul class="weekdays">
-    				<li>Sunday</li>
-    				<li>Monday</li>
-    				<li>Tuesday</li>
-    				<li>Wednesday</li>
-    				<li>Thursday</li>
-    				<li>Friday</li>
-    				<li>Saturday</li>
-    			</ul>
+	<header>
+		<h1 class="arrow-prev"><</h1>
+		<center class="month-year-name">August 2014</center>
+		<h1 class="arrow-next">></h1>
+	</header>
+	<div id="calendar">
+		<ul class="weekdays">
+			<li>Sunday</li>
+			<li>Monday</li>
+			<li>Tuesday</li>
+			<li>Wednesday</li>
+			<li>Thursday</li>
+			<li>Friday</li>
+			<li>Saturday</li>
+		</ul>
 
-    			<!-- Days from previous month -->
+		<!-- Days from previous month -->
 
-    			
+		
 
-    		</div><!-- /. calendar -->
-    	</div><!-- /. wrap -->
+	</div><!-- /. calendar -->
+</div><!-- /. wrap -->
 </body>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="moment.js"></script>
@@ -35,45 +35,17 @@
 <script type="text/javascript" src="newnepalidate.js"></script>
 </html>
 <script>
-	var standardDate = new moment(); 
+
+	var standardDate = new moment().format("YYYY-MM-DD"); 
 	$(document).ready(function() {
 		var count = 0;
 	 	var now = new moment();
+	 	var standardDate = moment(standardDate).format("YYYY-MM-DD");
+	 	
 	 	var dateList = getCalendarDate(standardDate);
+	 	var formattedDate = moment(standardDate).format("YYYY-MM-DD");
+	 	setDateTitle(formattedDate);
 	 	setCalendar(dateList);
 
-	});
-	$(".arrow-next").click(function() {
-
-		tempEngDate = moment(standardDate).format("YYYY-MM-DD");
-		console.log("cuttent english date: "+tempEngDate);
-
-		tempNepDate = AD2BS(tempEngDate);
-		console.log("converted nepal date: "+tempNepDate);
-		tempNepDate = moment(tempNepDate).add(1,"month").format("YYYY-MM-DD");
-		console.log("added Nepali Date: " + tempNepDate);
-		standardDate = BS2AD(tempNepDate);
-		//console.log(standardDate);
-		// console.log(standardDate);
-	 	var dateList = getCalendarDate(standardDate);
-		setCalendar(dateList);
-	});
-
-	$(".arrow-prev").click(function() {
-
-		tempEngDate = moment(standardDate).format("YYYY-MM-DD");
-		console.log("cuttent english date: "+tempEngDate);
-
-		tempNepDate = AD2BS(tempEngDate);
-		console.log("converted nepal date: "+tempNepDate);
-		tempNepDate = moment(tempNepDate).subtract(1,"month").format("YYYY-MM-DD");
-		console.log("added Nepali Date: " + tempNepDate);
-		standardDate = BS2AD(tempNepDate);
-		//console.log(standardDate);
-		// console.log(standardDate);
-	 	var dateList = getCalendarDate(standardDate);
-		setCalendar(dateList);
-	});
-
-	
+	});	
 </script>
