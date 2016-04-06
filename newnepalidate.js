@@ -1,10 +1,12 @@
-$('.arrow-next').on('click', function() {
-    $(this).data('clicked', true);
-});
-
-$('.arrow-prev').on('click', function() {
-    $(this).data('clicked', true);
-});
+	$('.arrow-next').on('click',function(){
+  		checkFlag = checkFlag +1;
+  		console.log("badyo: "+checkFlag);
+  	})
+  	$('.arrow-prev').on('click',function(){
+  		checkFlag = checkFlag -1;
+  		console.log("ghatyo: "+checkFlag);
+  	})
+var checkFlag = 0;
 
 var setDateToOne = function (date) {
 	var tempDate = date.split("-");
@@ -118,7 +120,6 @@ var setCalendar = function(date, todayDate) {
 		count = 0,
 		setMonth,
  		npDateArray = new Array(),
- 		checkFlag = 0;
  		enDateArray = new Array();
  	
  	today = moment(todayDate).date();
@@ -142,10 +143,17 @@ var setCalendar = function(date, todayDate) {
 		rows = 5;
 	else 
 		rows = 4;
+  	// console.log(checkFlag);
 
 	for(var i = 0; i <= rows ; i++) {
 	  var ul = $("<ul>").appendTo("#calendar").addClass("days");
 	  for(var j = 0; j <= 6; j++) {
+
+	  	//check if the date is today and set the flag accordingly
+  
+  	  if(enDateArray[count] === today && checkFlag == 0)
+  		dateFlag = true;
+  	  else dateFlag = false;
 
 	  	if(npDateArray[count] === 1)
 	  		if(bool)
@@ -153,16 +161,6 @@ var setCalendar = function(date, todayDate) {
 	  		else
 	  			bool = true;
 
-	  	//check if the date is today and set the flag accordingly
-	  	if(($('.arrow-next').data('clicked')))
-	  		checkFlag++;
-	  	if(($('.arrow-prev').data('clicked')))
-	  		checkFlag--;
-
-	  	if(enDateArray[count] === today && !checkFlag!=0)
-	  		dateFlag = true;
-	  	else dateFlag = false;
-	    
 	    li = $("<li>").appendTo(ul).addClass("day");
 
 	  	if(!bool)
@@ -208,7 +206,6 @@ $(".arrow-next").click(function() {
 	standardDate = BS2AD(tempNepDate);
 
  	var dateList = getCalendarDate(standardDate);
- 	console.log(dateList.length);
  	setDateTitle(standardDate);
 	setCalendar(dateList, standardDate);
 });
