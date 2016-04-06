@@ -81,6 +81,9 @@ header {
     line-height: 150px;
 }
 
+#calendar .today-date {
+	color: #E33;
+}
 #calendar .event {
 	clear: both;
 	display: block;

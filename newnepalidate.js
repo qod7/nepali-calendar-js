@@ -1,3 +1,11 @@
+$('.arrow-next').on('click', function() {
+    $(this).data('clicked', true);
+});
+
+$('.arrow-prev').on('click', function() {
+    $(this).data('clicked', true);
+});
+
 var setDateToOne = function (date) {
 	var tempDate = date.split("-");
 	tempDate[2] =''+0+ "1";
@@ -111,6 +119,10 @@ var setCalendar = function(date, todayDate) {
 		setMonth,
  		npDateArray = new Array(),
  		enDateArray = new Array();
+ 	
+ 	today = moment(todayDate).date();
+ 	var dateFlag; //flag to check if it is today or not.
+ 	dateFlag = false;
 
  	for (var i = 0; i < dateList.length; i++) {
 
@@ -140,25 +152,28 @@ var setCalendar = function(date, todayDate) {
 	  		else
 	  			bool = true;
 
+	  	//check if the date is today and set the flag accordingly
+	  	if(enDateArray[count] === today && !(($('.arrow-next').data('clicked'))) && !(($('.arrow-prev').data('clicked'))))
+	  		dateFlag = true;
+	  	else dateFlag = false;
+	    
 	    li = $("<li>").appendTo(ul).addClass("day");
 
 	  	if(!bool)
 	    	li = li.addClass("other-month");
+	    if(dateFlag)
+	    	li = li.addClass("today-date");
 
 	    $("<div>").prepend(npDateArray[count]).appendTo(li).addClass("date");
 	    $("<div>").prepend(enDateArray[count]).appendTo(li).addClass("endate");
 
 	    count = count + 1;
-
 	  };
 
 };
-
-
 }
 
 var setDateTitle = function(date) {
-
 	var adDate = date;
     var npMonthArray = new Array("\u092c\u0948\u0936\u093e\u0916", "\u091c\u0947\u0920", "\u0905\u0937\u093e\u0922", "\u0936\u094d\u0930\u093e\u0935\u0923", "\u092d\u093e\u0926\u094d\u0930", "\u0906\u0936\u094d\u0935\u093f\u0928", "\u0915\u093e\u0930\u094d\u0924\u093f\u0915", "\u092e\u0919\u094d\u0938\u093f\u0930", "\u092a\u094c\u0937", "\u092e\u093e\u0918", "\u092b\u093e\u0932\u094d\u0917\u0941\u0928", "\u091a\u0948\u0924\u094d\u0930");
     var enMonthArray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
@@ -169,7 +184,6 @@ var setDateTitle = function(date) {
 	npYear = getCurrentYear(npDate);
 
 	enMonth = moment(adDate).month();
-	console.log("enMonthArray[enMonth] and enMonthArray[enMonth+1]"+enMonthArray[enMonth]+" "+enMonthArray[enMonth+1]);
 	enYear = moment(adDate).year();
 
 	// if(enMonth >10)
@@ -180,7 +194,6 @@ var setDateTitle = function(date) {
 }
 
 $(".arrow-next").click(function() {
-
 	tempEngDate = moment(standardDate).format("YYYY-MM-DD");
 
 	tempNepDate = AD2BS(tempEngDate);
@@ -195,7 +208,6 @@ $(".arrow-next").click(function() {
 });
 
 $(".arrow-prev").click(function() {
-
 	tempEngDate = moment(standardDate).format("YYYY-MM-DD");
 
 	tempNepDate = AD2BS(tempEngDate);
