@@ -118,6 +118,7 @@ var setCalendar = function(date, todayDate) {
 		count = 0,
 		setMonth,
  		npDateArray = new Array(),
+ 		checkFlag = 0;
  		enDateArray = new Array();
  	
  	today = moment(todayDate).date();
@@ -153,7 +154,12 @@ var setCalendar = function(date, todayDate) {
 	  			bool = true;
 
 	  	//check if the date is today and set the flag accordingly
-	  	if(enDateArray[count] === today && !(($('.arrow-next').data('clicked'))) && !(($('.arrow-prev').data('clicked'))))
+	  	if(($('.arrow-next').data('clicked')))
+	  		checkFlag++;
+	  	if(($('.arrow-prev').data('clicked')))
+	  		checkFlag--;
+
+	  	if(enDateArray[count] === today && !checkFlag!=0)
 	  		dateFlag = true;
 	  	else dateFlag = false;
 	    
